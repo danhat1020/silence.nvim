@@ -32,6 +32,7 @@ M.colors = {
 M.config = {
     transparent = false,
     bold = true,
+    darker_comments = false,
 }
 
 function M.setup(opts)
@@ -40,13 +41,14 @@ function M.setup(opts)
 end
 
 function M.load()
-    if M.config.transparent then
-        M.colors.bg = 'none'
-    end
-
     vim.cmd('hi clear')
     if vim.fn.exists('syntax_on') then vim.cmd('syntax reset') end
     vim.g.colors_name = 'silence'
+
+    if M.config.transparent then M.colors.bg = 'none' end
+
+    local comments = M.colors.white
+    if M.config.darker_comments then comments = M.colors.grey5 end
 
     local highlights = {
         -- Core UI
@@ -60,7 +62,7 @@ function M.load()
         LineNrAbove  = { fg = M.colors.grey3,      bg = M.colors.bg,         },
         LineNrBelow  = { fg = M.colors.grey3,      bg = M.colors.bg,         },
         ColorColumn  = { fg = M.colors.none,       bg = M.colors.black,      },
-        Cursor       = { reverse = true,                                   bold = M.config.bold },
+        Cursor       = { reverse = true,                                     bold = M.config.bold },
         CursorIM     = { reverse = true,           bg = M.colors.bg,         },
         lCursor      = { reverse = true,           bg = M.colors.bg,         },
         Visual       = { fg = M.colors.string,     bg = M.colors.grey1,      },
@@ -72,8 +74,8 @@ function M.load()
         String       = { fg = M.colors.string,     bg = M.colors.bg,         },
         Type         = { fg = M.colors.type,       bg = M.colors.bg,         },
         Conditional  = { fg = M.colors.grey6,      bg = M.colors.bg,         },
-        Comment      = { fg = M.colors.white,      bg = M.colors.bg,         },
-        Todo         = { fg = M.colors.black,      bg = M.colors.white,      bold = M.config.bold },
+        Comment      = { fg = comments,            bg = M.colors.bg,         },
+        Todo         = { fg = M.colors.black,      bg = comments,            bold = M.config.bold },
         Special      = { fg = M.colors.grey6,      bg = M.colors.bg,         },
         Delimiter    = { fg = M.colors.grey4,      bg = M.colors.bg,         },
         Identifier   = { fg = M.colors.grey7,      bg = M.colors.bg,         },
@@ -154,7 +156,7 @@ function M.load()
         ['@module']               = { fg = M.colors.grey7,      bg = M.colors.bg },
         ['@string']               = { fg = M.colors.string,     bg = M.colors.bg },
         ['@string.escape']        = { fg = M.colors.grey5,      bg = M.colors.bg },
-        ['@comment']              = { fg = M.colors.white,      bg = M.colors.bg },
+        ['@comment']              = { fg = comments,            bg = M.colors.bg },
         ['@keyword']              = { fg = M.colors.grey4,      bg = M.colors.bg },
         ['@keyword.function']     = { fg = M.colors.grey5,      bg = M.colors.bg },
         ['@keyword.return']       = { fg = M.colors.grey4,      bg = M.colors.bg },
