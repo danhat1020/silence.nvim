@@ -63,7 +63,7 @@ Call `setup()` before applying the colorscheme. These are the defaults:
 
 ```lua
 require("silence").setup({
-    transparent = true,
+    transparent = false,
     bold = true,
 })
 ```
