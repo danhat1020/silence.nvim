@@ -2,7 +2,7 @@ local M = {}
 
 M.colors = {
         none       = 'none',
-        bg         = "#0c0c0c",
+        bg         = '#0c0c0c',
         black      = '#080808',
         grey0      = '#141414',
         grey1      = '#222222',
@@ -36,12 +36,12 @@ M.config = {
 
 function M.setup(opts)
     opts = opts or {}
-    M.config = vim.tbl_deep_extend("force", M.config, opts)
+    M.config = vim.tbl_deep_extend('force', M.config, opts)
 end
 
 function M.load()
     if M.config.transparent then
-        M.colors.background = "none"
+        M.colors.bg = 'none'
     end
 
     vim.cmd('hi clear')
