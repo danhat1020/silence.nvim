@@ -1,0 +1,1 @@
+require('silence').load()
