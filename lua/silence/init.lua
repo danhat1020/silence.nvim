@@ -16,14 +16,14 @@ M.colors = {
     grey9      = '#c0c0c0',
     white      = '#d0d0d0',
 
-    red        = '#d07070',
-    yellow     = '#d0b070',
-    blue       = '#70a0d0',
-    light_blue = '#a0b0d0',
+    red        = '#d070a0',
+    yellow     = '#d0b8a0',
+    blue       = '#6090d0',
+    light_blue = '#90a0d0',
 
     string     = '#7098a0',
     constant   = '#a890d0',
-    incsearch  = '#c0a080',
+    incsearch  = '#b0b0c0',
     matchparen = '#b8c0e0',
     type       = '#90939b',
     preproc    = '#9090a0',
@@ -88,10 +88,10 @@ function M.load()
         ['@lsp.type.variable']  = { fg = M.colors.grey8,      bg = M.colors.bg   },
         ['@lsp.type.parameter'] = { fg = M.colors.light_blue, bg = M.colors.bg   },
         -- Popup menu
-        Pmenu        = { fg = M.colors.grey3,      bg = M.colors.bg,         },
+        Pmenu        = { fg = M.colors.grey4,      bg = M.colors.bg,         },
         PmenuSel     = { fg = M.colors.white,      bg = M.colors.black,      bold = M.config.bold },
         PmenuSbar    = { fg = M.colors.none,       bg = M.colors.black,      },
-        PmenuThumb   = { fg = M.colors.none,       bg = M.colors.grey4,      },
+        PmenuThumb   = { fg = M.colors.none,       bg = M.colors.grey2,      },
         -- Search & matching
         IncSearch    = { fg = M.colors.black,      bg = M.colors.incsearch,  },
         Search       = { fg = M.colors.black,      bg = M.colors.white,      },

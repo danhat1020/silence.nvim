@@ -65,6 +65,7 @@ Call `setup()` before applying the colorscheme. These are the defaults:
 require("silence").setup({
     transparent = false,
     bold = true,
+    darker_comments = false,
 })
 ```
 
