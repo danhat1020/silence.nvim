@@ -33,9 +33,9 @@ use {
     "danhat1020/silence.nvim",
         config = function()
             require("silence").setup({
-                    -- options here (see configuration)
-                    })
-    vim.cmd("colorscheme silence")
+                -- options here (see configuration)
+            })
+            vim.cmd("colorscheme silence")
         end,
 }
 ```

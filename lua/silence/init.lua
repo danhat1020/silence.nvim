@@ -98,8 +98,8 @@ function M.load()
     Search                     = { fg = M.colors.black, bg = M.colors.white, },
     MatchParen                 = { fg = M.colors.matchparen, bg = M.colors.grey3, bold = M.config.bold },
     -- Statusline & tabs
-    StatusLine                 = { fg = M.colors.grey10, bg = M.colors.grey2, },
-    StatusLineNC               = { fg = M.colors.grey5, bg = M.colors.grey1, },
+    StatusLine                 = { fg = M.colors.grey8, bg = M.colors.grey1, },
+    StatusLineNC               = { fg = M.colors.grey4, bg = M.colors.grey0, },
     TabLine                    = { fg = M.colors.grey4, bg = M.colors.grey6, underline = true },
     TabLineFill                = { fg = M.colors.grey4, bg = M.colors.bg, reverse = true },
     TabLineSel                 = { fg = M.colors.grey4, bg = M.colors.bg, },
